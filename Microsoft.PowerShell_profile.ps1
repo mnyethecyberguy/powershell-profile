@@ -1,10 +1,12 @@
 <#
-Author:		  Michael Nye
-Script Name:  Microsoft.PowerShell_profile.ps1
-Version:      1.1
-Description:  Script contains PowerShell profile that can be used on Windows or macOS
-Change Log:	  v1.0: Initial Release
-              v1.1: Added prompt function
+Author:		    Michael Nye
+Script Name:    Microsoft.PowerShell_profile.ps1
+Version:        1.1
+Description:    Script contains PowerShell profile that can be used on Windows or macOS
+Change Log:	    v1.0: Initial Release
+                v1.1: Added prompt function
+Notes:          Windows CurrentUserCurrentHost profile location ($PROFILE): C:\Users\<user>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1
+                MacOS profile location: /Users/<user>/.config/powershell/Microsoft.PowerShell_profile.ps1
 #>
 
 # Customize PS Prompt
