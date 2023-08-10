@@ -24,3 +24,17 @@ Function Prompt {
         #"`e[32m`e[1m$env:USER@$($(hostname).ToLower().replace(".local",''))`e[0m:`e[34m`e[1m$($(Get-Location).Path.replace($home,'~'))`e[0m$ "
     }    
 }
+
+Register-ArgumentCompleter -Native -CommandName aws -ScriptBlock {
+    param($commandName, $wordToComplete, $cursorPosition)
+        $env:COMP_LINE=$wordToComplete
+        if ($env:COMP_LINE.Length -lt $cursorPosition){
+            $env:COMP_LINE=$env:COMP_LINE + " "
+        }
+        $env:COMP_POINT=$cursorPosition
+        aws_completer.exe | ForEach-Object {
+            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        }
+        Remove-Item Env:\COMP_LINE     
+        Remove-Item Env:\COMP_POINT  
+}
