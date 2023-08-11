@@ -1,7 +1,7 @@
 <#
 Author:		    Michael Nye
 Script Name:    Microsoft.PowerShell_profile.ps1
-Version:        1.1
+Version:        1.3
 Description:    Script contains PowerShell profile that can be used on Windows or macOS
 Change Log:	    v1.0: Initial Release
                 v1.1: Added prompt function
